@@ -1,0 +1,83 @@
+This file contains messages produced while configuring
+  pari-2.11.2 
+to aid debugging if Configure makes a mistake. Command line was
+  > /home/virt/multisig/class/depend/pari/Configure --prefix=/home/virt/multisig/target/rls/debug/build/class_group-6ce0709d060cb5fd/out/pari
+
+/usr/bin/gcc -o linux-x86_64-ansi2400767 ansi.c
+/usr/bin/gcc -o linux-x86_64-gnu2400767 gnu.c
+/usr/bin/gcc -fno-strict-aliasing -o linux-x86_64-gnu2400767 gnu.c
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer endian.c -o linux-x86_64-endian2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_sse2.c -o linux-x86_64-tmp2400767 -lm
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_exp2.c -o linux-x86_64-tmp2400767 -lm
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_log2.c -o linux-x86_64-tmp2400767 -lm
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_strftime.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_getrusage.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_gettimeofday.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_sigaction.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_TIOCGWINSZ.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_getrlimit.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_stat.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_vsnprintf.c -o linux-x86_64-tmp2400767
+has_vsnprintf.c: In function ‘f’:
+has_vsnprintf.c:6:19: warning: ‘__builtin_vsnprintf’ output truncated before the last format character [-Wformat-truncation=]
+    6 |   vsnprintf(s,1," ",ap); return 0;
+      |                   ^
+In file included from /usr/include/stdio.h:867,
+                 from has_vsnprintf.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:80:10: note: ‘__builtin_vsnprintf’ output 2 bytes into a destination of size 1
+   80 |   return __builtin___vsnprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |         __bos (__s), __fmt, __ap);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_mmap.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_waitpid.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_setsid.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_getenv.c -o linux-x86_64-tmp2400767
+has_getenv.c: In function ‘main’:
+has_getenv.c:2:19: warning: ignoring return value of ‘getenv’, declared with attribute warn_unused_result [-Wunused-result]
+    2 | int main(){ (void)getenv(""); return 0; }
+      |                   ^~~~~~~~~~
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_isatty.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_alarm.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_system.c -o linux-x86_64-tmp2400767
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_dlopen.c -o linux-x86_64-tmp2400767
+/usr/bin/ld: /tmp/cccvES0n.o: in function `main':
+has_dlopen.c:(.text.startup+0x15): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer has_dlopen.c -o linux-x86_64-tmp2400767 -ldl
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-gmp2400767 gmp_version.c -lgmp
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-gmp2400767 gmp_mismatch.c -lgmp
+xmkmf
+/home/virt/multisig/class/depend/pari/Configure: 1: eval: xmkmf: not found
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-X112400767 has_X11.c -lX11
+has_X11.c:1:10: fatal error: X11/Xlib.h: No such file or directory
+    1 | #include <X11/Xlib.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+FLTK_LIBS=`fltk-config --ldflags`
+/home/virt/multisig/class/depend/pari/Configure: 1: eval: fltk-config: not found
+g++ -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-fltk2400767 has_fltk.c
+has_fltk.c:1:10: fatal error: FL/Fl.H: No such file or directory
+    1 | #include <FL/Fl.H>
+      |          ^~~~~~~~~
+compilation terminated.
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-rlv2400767 rl_version.c -lreadline
+rl_version.c:2:10: fatal error: readline/readline.h: No such file or directory
+    2 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-rlv2400767 rl_version.c -lreadline -ltinfo
+rl_version.c:2:10: fatal error: readline/readline.h: No such file or directory
+    2 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-rlv2400767 rl_version.c -lreadline -lncurses
+rl_version.c:2:10: fatal error: readline/readline.h: No such file or directory
+    2 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+/usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer -o linux-x86_64-rlv2400767 rl_version.c -lreadline -ltermcap
+rl_version.c:2:10: fatal error: readline/readline.h: No such file or directory
+    2 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
