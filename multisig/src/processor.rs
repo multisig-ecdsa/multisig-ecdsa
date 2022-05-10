@@ -613,7 +613,7 @@ mod test {
     // }
 
     fn run_multisig(n: usize) {
-        let clgroup = CLGroup::new_from_setup(&1600, &BigInt::from(100));
+        let clgroup = CLGroup::new_from_setup(&3392, &BigInt::from(100));
         let sk_list = (0..n).map(|_| FE::new_random()).collect::<Vec::<_>>();
         let pk_list = (0..n).map(|i| GE::generator() * sk_list[i]).collect::<Vec::<_>>();
         let mut clsk_list = Vec::<SK>::with_capacity(n);
